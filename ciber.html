@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exercici JavaScript Bàsic</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <script>
+    // Exercici 1:
+    // L'exercici consisteix a crear un fitxer anomenat ciber.html 
+    // i mostrar per consola un 'Hola mundo' (per activar la consola ->; F12). 
+    // Pista: Console.log()
+    console.log("Hola mundo");
+    
+    //Exercici 2:
+    //Crea un alert que mostri el teu nom:
+    
+    window.alert("Em dic Martin");
+
+    //Exercici 3:
+    //Crea una variable que contingui el teu nom i un altre que contingui 
+    //el teu cognom.
+    var nom = "Martín";
+    var cognom = "Lecaros";
+    console.log(`Me llamo: ${nom} ${cognom}`);
+    
+    //Exercici 4:const
+    //Crea dos vaconstdos números i fes una suma entre ells.
+    var num1 = 5;
+    var num2 = 6;
+    console.log(`La suma de ${num1} y ${num2} es: ${num1 + num2}`);
+
+    //Exercici 5:
+    //Crea una variable nota_examen juntament amb un alert que ens digui si 
+    //l’examen ha estat aprovat o no juntament amb la nota. (caldrà utilitzar un 
+    //condicional IF)
+
+    var nota_examen = function(nota) {
+        if (nota >= 5 && nota <=10) {
+            window.alert("YUHUUU has aprobado el examen con un " + nota);
+        } else if (nota >= 0 && nota <5) {
+            window.alert("OOhh has suspendido el examen con un " + nota);
+        } else {
+            window.alert("BAD NEWS!! Has ingresado mal la nota.\nNo puede ser un " + nota);
+        }
+    }
+    nota_examen(10);
+
+    //Exercici 6:
+    //Reemplaça la paraula blau per la paraula verd a la següent cadena 
+    //de text: Tinc un cotxe de color blau. Després intenta fer-ho remplaçant 
+    //les o per les u
+
+    var coche = 'Tinc un cotxe de color blau';
+    var cambiarColor = function() {
+        let verd = coche.replace('blau', 'verd');
+        let ooos = coche.replace(/o/g, 'u');
+        console.log(verd);
+        console.log(ooos);
+    }
+    console.log(coche);
+    cambiarColor();
+
+    //Exercici 7: Donat el seguit llistat d’objectes ‘taula’, ‘cadira’, ‘ordinador’, 
+    //‘libreta’, per un bucle que mostri per pantalla cada objecte i la save posició 
+    //al llistat.
+
+    const objetos = ['taula', 'cadira', 'ordinador', 'libreta'];
+    const print = function() {
+        for (let i=0; i<objetos.length; i++) {
+            let print = 'L\'objecte ' + objetos[i] + ' està a la posició ' + i;
+            console.log(print);
+        }
+    }
+    print();
+
+
+    //Exercici 8: Crea una funció anomenada calculadora que tingui com a entrada 
+    //els següents paràmetres: operador, valor1 i valor2.
+    //Estructura de la funció que faci sumes, restes i multiplicacions. 
+    //El resultat haurà de ser mostrar per pantalla.
+
+    function calculadora(operador, x, y) {
+        const suma = x+y; 
+        const resta = x-y; 
+        const multiplicacion = x*y; 
+
+        switch(operador.toLowerCase()) {
+            case("suma"):
+            console.log(`Es una suma. Total: ${suma}`);
+            break;
+
+            case("resta"):
+            console.log(`Es una resta. Total: ${resta}`);
+            break;
+
+            case("multiplicacion"):
+            console.log(`Es una multiplicación. Total: ${multiplicacion}`);
+            break;
+        }
+    }
+    calculadora("RESTA",40,20);
+  
+  </script> 
+  </head>
+  <body>
+  </body>
+</html>
